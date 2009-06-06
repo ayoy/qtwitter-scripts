@@ -44,9 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_libdir}/*
 %{_includedir}/*
-%{_datadir}/%{name}/*
-%{_datadir}/icons/*
-%{_datadir}/applications/*
+%{_datadir}/*
 
 
 %changelog
