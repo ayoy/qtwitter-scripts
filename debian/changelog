@@ -1,0 +1,5 @@
+qtwitter (0.6.0-1) unstable; urgency=low
+
+  * Debian GNU/Linux amd64 package for Lenny.
+
+ -- Anna Nowak <wiorka@gmail.com>  Mon, 27 Apr 2009 14:41:47 +0200
