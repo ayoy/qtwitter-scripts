@@ -27,6 +27,11 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
+	sed -i -e 's/\(DEFINES += SHARE_DIR.*\)$$$${SHARE_DIR}\(.*\)/\1\/usr\/share\/$$$${TARGET}\2/' \
+		     -e 's/\(translations.path.*\)$$$${SHARE_DIR}\(.*\)/\1$$$${INSTALL_PREFIX}\/share\/$$$${TARGET}\2/' \
+		     -e '/-Wl,-rpath,$$$${TOP}/d' \
+		     -e '/doc \\/d' \
+	    qtwitter-app/qtwitter-app.pro
 	qmake -config release PREFIX=$(CURDIR)/debian/qtwitter/usr
 	$(MAKE)
 	#docbook-to-man debian/qtwitter.sgml > qtwitter.1
@@ -39,6 +44,7 @@ clean:
 	rm -f build-stamp configure-stamp
 
 	# Add here commands to clean up after the build process.
+	qmake -config release PREFIX=$(CURDIR)/debian/qtwitter/usr
 	$(MAKE) clean
 
 	dh_clean 
@@ -62,7 +68,7 @@ binary-arch: install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs CHANGELOG
-	dh_installdocs
+	dh_installdocs README LICENSE
 	dh_installexamples
 #	dh_install
 #	dh_installmenu
