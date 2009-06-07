@@ -8,7 +8,7 @@ inherit qt4 multilib
 
 DESCRIPTION="A Qt client for Twitter"
 HOMEPAGE="http://www.qt-apps.org/content/show.php/qTwitter?content=99087"
-SRC_URI="http://files.ayoy.net/qtwitter/release/current/src/${P}-src.tar.gz"
+SRC_URI="http://files.ayoy.net/qtwitter/release/${PV}/src/${P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -18,10 +18,14 @@ IUSE="debug"
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}"
 
-QTWITTER_LANGS="ca de es fr jp pl"
+QTWITTER_LANGS="pt_BR"
+QTWITTER_NOLONGLANGS="ca_ES de_DE es_ES fr_FR ja_JP pl_PL"
 
 for L in $QTWITTER_LANGS; do
 	IUSE="$IUSE linguas_$L"
+done
+for L in $QTWITTER_NOLONGLANGS; do
+	IUSE="$IUSE linguas_${L%_*}"
 done
 
 src_prepare() {
@@ -34,8 +38,14 @@ src_prepare() {
 	#translations
 	local langs=
 	for lingua in $LINGUAS; do
-		if has $lingua $LINGUAS; then
+		if has $lingua $QTWITTER_LINGUAS; then
 			langs="$langs loc/${PN}_${lingua}.ts"
+		else
+			for a in $QTWITTER_NOLONGLANGS; do
+				if [[ $lingua == ${a%_*} ]]; then
+					langs="$langs loc/${PN}_${a}.ts"
+				fi
+			done
 		fi
 	done
 
