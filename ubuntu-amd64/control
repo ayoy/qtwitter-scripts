@@ -1,7 +1,7 @@
 Source: qtwitter
 Section: web
 Priority: extra
-Maintainer: Anna Nowak <wiorka@gmail.com>
+Maintainer: Dominik Kapusta <d@ayoy.net>
 Build-Depends: libc6-dev (>= 2.9-4ubuntu6 ), libqt4-dev (>= 4.5.0-0ubuntu4.1 ), libstdc++6-4.3-dev (>= 4.3.3-5ubuntu4 ), linux-libc-dev (>= 2.6.28-12.43 )
 Standards-Version: 3.8.0
 Homepage: http://qtwitter.ayoy.net

@@ -1,17 +1,7 @@
-qtwitter (0.7.0-0ubuntu1) unstable; urgency=low
+qtwitter (0.7.1-0ubuntu1) jaunty; urgency=low
 
-  * PROVIDED SUPPORT FOR IDENTI.CA using Twitter-compatible API,
-  * added support for sending and deleting direct messages,
-  * added support for favoring and disfavoring statuses,
-  * added timestamp and 'in-reply-to' information to statuses,
-  * added user info popups,
-  * provided 3 context-switchable icons for common operations with statuses,
-  * support for URL shortening extended by tinyarro.ws, u.nu and bit.ly,
-  * provided variable length of statuses lists being downloaded,
-  * huge performance and memory management improvements,
-  * added basic support for freedesktop icons on X11,
-  * provided an option to disable password storing,
-  * accounts settings page reorganized and made more user-friendly,
-  * fixed lots of minor bugs.
+  * CRITICAL: Fixed parsing of statuses' ids (after Twitter statuses count reached maximum for 32-bit integer),
+  * added digg.com URL shortening service,
+  * minor corrections to user info popup and settings dialog.
 
- -- Anna Nowak <wiorka@gmail.com>  Mon, 08 Jun 2009 18:42:47 +0200
+ -- Dominik Kapusta <d@ayoy.net>  Sat, 13 Jun 2009 15:35:07 +0200
