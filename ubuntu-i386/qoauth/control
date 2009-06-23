@@ -1,0 +1,28 @@
+Source: libqoauth0
+Priority: extra
+Maintainer: Dominik Kapusta <d@ayoy.net>
+Build-Depends: debhelper (>= 7), libc6-dev (>= 2.9-4ubuntu6 ), libqca2-dev (>= 2.0.0-4 ), libqt4-dev (>= 4.5.0-0ubuntu4.1 ), libstdc++6-4.3-dev (>= 4.3.3-5ubuntu4 ), linux-libc-dev (>= 2.6.28-11.42 )
+Standards-Version: 3.8.0
+Section: libs
+Homepage: http://github.com/ayoy/qoauth
+
+Package: libqoauth0-dev
+Section: libdevel
+Architecture: i386
+Depends: libqoauth0 (= ${binary:Version})
+Description: QOAuth library dev files
+ QOAuth library dev files
+
+Package: libqoauth0-doc
+Section: doc
+Architecture: all
+Depends: libqoauth0 (= ${binary:Version})
+Description: QOAuth library doc files
+ QOAuth library doc files
+
+Package: libqoauth0
+Section: libs
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: QOAuth library
+ QOAuth library

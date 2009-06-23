@@ -1,0 +1,4 @@
+usr/include/QtOAuth/*
+usr/lib/libqoauth.so
+usr/lib/libqoauth.prl
+usr/share/qt4/mkspecs/features/oauth.prf
