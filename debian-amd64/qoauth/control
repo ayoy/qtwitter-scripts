@@ -1,7 +1,7 @@
 Source: libqoauth
 Priority: extra
 Maintainer: Dominik Kapusta <d@ayoy.net>
-Build-Depends: debhelper (>= 7), libc6-dev (>= 2.7-18 ), libqca2-dev (>= 2.0.0-4 ), libqt4-dev (>= 4.4.3-1 ), libqt4-dev (>= 4.4.3-1 ), libstdc++6-4.3-dev (>= 4.3.2-1.1 ), linux-libc-dev (>= 2.6.26-15lenny3 )
+Build-Depends: debhelper (>= 7), libc6-dev (>= 2.7-18 ), libqca2-dev (>= 2.0.0-4 ), libqca2-plugin-ossl (>= 0.1~20070904-3 ), libqt4-dev (>= 4.4.3-1 ), libqt4-dev (>= 4.4.3-1 ), libstdc++6-4.3-dev (>= 4.3.2-1.1 ), linux-libc-dev (>= 2.6.26-15lenny3 )
 Standards-Version: 3.7.3
 Section: libs
 Homepage: http://github.com/ayoy/qoauth
