@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for libqoauth0
+# postinst script for libqoauth
 #
 # see: dh_installdeb(1)
 

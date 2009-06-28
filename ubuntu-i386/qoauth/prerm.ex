@@ -1,5 +1,5 @@
 #!/bin/sh
-# prerm script for libqoauth0
+# prerm script for libqoauth
 #
 # see: dh_installdeb(1)
 

@@ -28,6 +28,7 @@ configure-stamp:
 	dh_testdir
 	# Add here commands to configure the package.
 
+	sed -i 's/\(system.*\)$$$${INSTALL_PREFIX}/\1\/usr/' qoauth.pro
 	qmake -config release PREFIX=$(CURDIR)/debian/tmp/usr
 
 	touch configure-stamp
