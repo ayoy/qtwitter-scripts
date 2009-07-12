@@ -1,4 +1,10 @@
-qtwitter (0.7.1-0ubuntu1) jaunty; urgency=low
+qtwitter (0.8.0-1) jaunty; urgency=low
+
+  * New upstream release
+
+ -- Dominik Kapusta <d@ayoy.net>  Sun, 12 Jul 2009 20:55:31 +0300
+
+qtwitter (0.7.1-1) jaunty; urgency=low
 
   * CRITICAL: Fixed parsing of statuses' ids (after Twitter statuses count reached maximum for 32-bit integer),
   * added digg.com URL shortening service,
