@@ -29,8 +29,6 @@ configure-stamp:
 	# Add here commands to configure the package.
 
 	sed -i 's/\(system.*\)$$$${INSTALL_PREFIX}/\1\/usr/' qoauth.pro
-	qmake -config release PREFIX=$(CURDIR)/debian/tmp/usr
-
 	touch configure-stamp
 
 
@@ -39,12 +37,11 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-#	qmake -config release PREFIX=$(CURDIR)/debian/libqoauth0/usr
 	$(MAKE)
 
 	touch $@
 
-clean:
+clean: 
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
@@ -73,7 +70,7 @@ binary-indep: install
 binary-arch: install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_installdocs
 #	dh_installexamples
 	dh_install --sourcedir=debian/tmp -v
@@ -93,7 +90,7 @@ binary-arch: install
 	dh_fixperms
 #	dh_perl
 #	dh_python
-#	dh_makeshlibs
+	dh_makeshlibs -V
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol

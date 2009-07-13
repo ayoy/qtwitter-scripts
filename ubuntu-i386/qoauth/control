@@ -8,7 +8,7 @@ Homepage: http://github.com/ayoy/qoauth
 
 Package: libqoauth0-dev
 Section: libdevel
-Architecture: i386
+Architecture: any
 Depends: libqoauth0 (= ${binary:Version})
 Description: Qt OAuth library dev files
  Qt OAuth library dev files
@@ -22,7 +22,7 @@ Description: Qt OAuth library doc files
 
 Package: libqoauth0
 Section: libs
-Architecture: i386
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Depends: ${shlibs:Depends}, libqca2-plugin-ossl (>= 0.1~20070904-3 ), ${misc:Depends}
 Description: Qt OAuth library
  Qt OAuth library
