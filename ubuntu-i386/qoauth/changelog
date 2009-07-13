@@ -1,5 +1,5 @@
-libqoauth (0.1.0-1) unstable; urgency=low
+libqoauth (0.1.0-1) jaunty; urgency=low
 
   * Initial release.
 
- -- Dominik Kapusta <d@ayoy.net>  Wed, 24 Jun 2009 08:46:40 +0300
+ -- Dominik Kapusta <d@ayoy.net>  Sun, 28 Jun 2009 22:24:43 +0200
