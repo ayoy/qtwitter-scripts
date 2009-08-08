@@ -27,8 +27,6 @@ configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	# Add here commands to configure the package.
-
-	sed -i 's/\(system.*\)$$$${INSTALL_PREFIX}/\1\/usr/' qoauth.pro
 	touch configure-stamp
 
 
@@ -37,6 +35,7 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
+	qmake -config release PREFIX=$(CURDIR)/debian/tmp/usr
 	$(MAKE)
 
 	touch $@
@@ -49,6 +48,7 @@ clean:
 	# Add here commands to clean up after the build process.
 	qmake -config release PREFIX=$(CURDIR)/debian/tmp/usr
 	$(MAKE) clean
+	rm -rf $(CURDIR)/doc/html
 
 	dh_clean 
 
@@ -60,6 +60,8 @@ install: build
 
 	# Add here commands to install the package into debian/tmp
 	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+	doxygen $(CURDIR)/Doxyfile
+	install -m644 debian/shlibs debian/tmp/DEBIAN
 
 
 # Build architecture-independent files here.

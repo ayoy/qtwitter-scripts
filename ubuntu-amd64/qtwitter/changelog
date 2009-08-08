@@ -1,3 +1,9 @@
+qtwitter (0.8.3-1) jaunty; urgency=low
+
+  * New upstream release
+
+ -- Dominik Kapusta <d@ayoy.net>  Sat, 08 Aug 2009 02:11:54 +0300
+
 qtwitter (0.8.2-1) jaunty; urgency=low
 
   * New upstream release

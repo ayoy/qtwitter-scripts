@@ -1,3 +1,9 @@
+libqoauth (1.0-1) jaunty; urgency=low
+
+  * New upstream release
+
+ -- Dominik Kapusta <d@ayoy.net>  Sat, 08 Aug 2009 01:35:30 +0300
+
 libqoauth (0.1.0-1) jaunty; urgency=low
 
   * Initial release.

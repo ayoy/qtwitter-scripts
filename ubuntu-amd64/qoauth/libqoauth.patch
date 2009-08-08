@@ -1,0 +1,49 @@
+--- src/src.pro.orig	2009-08-08 02:37:43.000000000 +0300
++++ src/src.pro	2009-08-08 02:37:12.000000000 +0300
+@@ -12,7 +12,7 @@
+     crypto \
+     create_prl
+ 
+-#!macx: CONFIG += static_and_shared
++!macx: CONFIG += static_and_shared
+ 
+ OBJECTS_DIR = tmp
+ MOC_DIR = tmp
+@@ -37,8 +37,6 @@
+ headers.files = \
+     $${PUBLIC_HEADERS} \
+     $${INC_DIR}/QtOAuth
+-features.path = $$[QMAKE_MKSPECS]/features
+-features.files = ../oauth.prf
+ docs.files = ../doc/html
+ 
+ macx {
+@@ -58,11 +56,14 @@
+     isEmpty( PREFIX ):INSTALL_PREFIX = /usr
+     else:INSTALL_PREFIX = $${PREFIX}
+ 
++    features.path = $${INSTALL_PREFIX}/share/qt4/mkspecs/features
++    features.files = ../oauth.prf
++
+     # this creates a pkgconfig file
+-    system( ./pcfile.sh $${INSTALL_PREFIX} $${VERSION} )
++    system( ./pcfile.sh /usr $${VERSION} )
+     pkgconfig.files = qoauth.pc
+ 
+-    target.path = $${INSTALL_PREFIX}/lib
++    target.path = $${INSTALL_PREFIX}/lib64
+     headers.path = $${INSTALL_PREFIX}/include/QtOAuth
+     docs.path = $${INSTALL_PREFIX}/share/doc/$${TARGET}-$${VERSION}
+     pkgconfig.path = $${target.path}/pkgconfig
+--- oauth.prf.orig	2009-08-08 02:58:11.000000000 +0300
++++ oauth.prf	2009-08-08 02:57:52.000000000 +0300
+@@ -4,7 +4,8 @@
+ QOAUTH_INCDIR ~= s!/qt4!!
+ QOAUTH_LIBDIR ~= s!/qt4!!
+ 
+-CONFIG *= qt crypto
++CONFIG *= qt
++CONFIG += crypto
+ 
+ # if we are including oauth.prf from the qoauth tree (and not utilizing it as
+ # an installed qmake CONFIG feature), then point to the tree.  this allows our
