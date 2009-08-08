@@ -1,5 +1,5 @@
 Name:		qtwitter
-Version:	0.8.2
+Version:	0.8.3
 Release:	1%{?dist}
 Summary:	A Qt-based client for Twitter and Identi.ca
 
@@ -9,8 +9,8 @@ URL:		http://qtwitter.ayoy.net
 Source0:	http://files.ayoy.net/qtwitter/release/%{version}/src/%{name}-%{version}-src.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires:	qt-devel qoauth-devel
-Requires:	qt-x11 qoauth
+BuildRequires:	qt-devel qoauth-devel >= 1.0
+Requires:	qt-x11 qoauth >= 1.0
 
 %description
 qTwitter is an application interacting with Twitter and Identi.ca social
