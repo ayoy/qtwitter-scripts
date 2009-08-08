@@ -28,8 +28,8 @@ using QOAuth library.
 %prep
 %setup -q
 sed -i -e '/^ *docs \\$/d' \
-       -e "s!\(\$\${INSTALL_PREFIX}\)/lib!%{_libdir}!" qoauth.pro
-sed -i -e 's/^\#\(!macx\)/\1/' src/src.pro
+       -e 's/^\#\(!macx\)/\1/' \
+       -e "s!\(\$\${INSTALL_PREFIX}\)/lib!%{_libdir}!" src/src.pro
 
 %build
 qmake-qt4 PREFIX="/usr"
