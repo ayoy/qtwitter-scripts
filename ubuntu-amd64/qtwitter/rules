@@ -27,10 +27,10 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-	 sed -i -e 's/\(DEFINES += SHARE_DIR.*\)$$$${SHARE_DIR}\(.*\)/\1\/usr\/share\/$$$${TARGET}\2/' \
+	mkdir -p urlshortener/tmp twitterapi/tmp qtwitter-app/tmp
+	sed -i -e 's/\(DEFINES += SHARE_DIR.*\)$$$${SHARE_DIR}\(.*\)/\1\/usr\/share\/$$$${TARGET}\2/' \
          -e 's/\(translations.path.*\)$$$${SHARE_DIR}\(.*\)/\1$$$${INSTALL_PREFIX}\/share\/$$$${TARGET}\2/' \
          -e '/-Wl,-rpath,$$$${TOP}/d' \
-         -e '/doc \\/d' \
       	qtwitter-app/qtwitter-app.pro
 	qmake -config release PREFIX=$(CURDIR)/debian/qtwitter/usr
 	$(MAKE)
