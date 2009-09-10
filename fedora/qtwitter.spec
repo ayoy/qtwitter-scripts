@@ -1,5 +1,5 @@
 Name:		qtwitter
-Version:	0.8.3
+Version:	0.9.0
 Release:	1%{?dist}
 Summary:	A Qt-based client for Twitter and Identi.ca
 
@@ -20,7 +20,7 @@ networks.
 %setup -q
 sed -i "s!\$\${INSTALL_PREFIX}\/lib!%{_libdir}!" \
     twitterapi/twitterapi.pro urlshortener/urlshortener.pro
-sed -i -e '/doc \\/d' -e '/-Wl,-rpath,\$\${TOP}/d' qtwitter-app/qtwitter-app.pro
+sed -i -e '/-Wl,-rpath,\$\${TOP}/d' qtwitter-app/qtwitter-app.pro
 
 %build
 qmake-qt4 PREFIX="/usr"
@@ -51,6 +51,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Sep 10 2009 Dominik Kapusta <d at, ayoy.net> 0.9.0
+- New upstream version
+* Sat Aug 08 2009 Dominik Kapusta <d at, ayoy.net> 0.8.3
+- New upstream version
 * Thu Jul 30 2009 Dominik Kapusta <d at, ayoy.net> 0.8.2
 - New upstream version
 * Thu Jul 16 2009 Dominik Kapusta <d at, ayoy.net> 0.8.1
