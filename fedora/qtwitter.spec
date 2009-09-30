@@ -1,5 +1,5 @@
 Name:		qtwitter
-Version:	0.9.0
+Version:	0.9.1
 Release:	1%{?dist}
 Summary:	A Qt-based client for Twitter and Identi.ca
 
@@ -51,6 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Sep 30 2009 Dominik Kapusta <d at, ayoy.net> 0.9.1
+- New upstream version
 * Thu Sep 10 2009 Dominik Kapusta <d at, ayoy.net> 0.9.0
 - New upstream version
 * Sat Aug 08 2009 Dominik Kapusta <d at, ayoy.net> 0.8.3
