@@ -1,38 +1,43 @@
-qtwitter (0.9.0-1) unstable; urgency=low
+qtwitter (0.9.1-1) jaunty; urgency=low
 
   * New upstream release
 
- -- Dominik Kapusta <ayoy@sandbox.carriles.pl>  Thu, 10 Sep 2009 20:49:33 +0200
+ -- Dominik Kapusta <d@ayoy.net>  Wed, 30 Sep 2009 21:53:40 +0300
 
-qtwitter (0.8.3-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Dominik Kapusta <d@ayoy.net>  Sat, 08 Aug 2009 16:54:53 +0200
-
-qtwitter (0.8.2-1) unstable; urgency=low
+qtwitter (0.9.0-0ubuntu1) jaunty; urgency=low
 
   * New upstream release
 
- -- Dominik Kapusta <d@ayoy.net>  Thu, 30 Jul 2009 13:23:38 +0200
+ -- Dominik Kapusta <d@ayoy.net>  Thu, 10 Sep 2009 22:49:00 +0300
 
-qtwitter (0.8.1-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Dominik Kapusta <d@ayoy.net>  Thu, 16 Jul 2009 00:51:54 +0200
-
-qtwitter (0.8.0-1) unstable; urgency=low
+qtwitter (0.8.3-1) jaunty; urgency=low
 
   * New upstream release
 
- -- Dominik Kapusta <d@ayoy.net>  Sun, 12 Jul 2009 21:33:46 +0200
+ -- Dominik Kapusta <d@ayoy.net>  Sat, 08 Aug 2009 02:11:54 +0300
 
-qtwitter (0.7.1-1) unstable; urgency=low
+qtwitter (0.8.2-1) jaunty; urgency=low
+
+  * New upstream release
+
+ -- Dominik Kapusta <d@ayoy.net>  Thu, 30 Jul 2009 14:00:14 +0300
+
+qtwitter (0.8.1-1) jaunty; urgency=low
+
+  * New upstream release
+
+ -- Dominik Kapusta <d@ayoy.net>  Thu, 16 Jul 2009 00:57:44 +0300
+
+qtwitter (0.8.0-1) jaunty; urgency=low
+
+  * New upstream release
+
+ -- Dominik Kapusta <d@ayoy.net>  Sun, 12 Jul 2009 20:55:31 +0300
+
+qtwitter (0.7.1-1) jaunty; urgency=low
 
   * CRITICAL: Fixed parsing of statuses' ids (after Twitter statuses count reached maximum for 32-bit integer),
   * added digg.com URL shortening service,
   * minor corrections to user info popup and settings dialog.
 
- -- Dominik Kapusta <d@ayoy.net>  Sat, 13 Jun 2009 14:42:46 +0200
-
+ -- Dominik Kapusta <d@ayoy.net>  Sat, 13 Jun 2009 15:35:07 +0200
