@@ -2,12 +2,12 @@ Source: qtwitter
 Section: web
 Priority: extra
 Maintainer: Dominik Kapusta <d@ayoy.net>
-Build-Depends: debhelper (>= 7), libqt4-dev (>= 4.5.0-0ubuntu4.1 ), libstdc++6-4.3-dev (>= 4.3.3-5ubuntu4 ), linux-libc-dev (>= 2.6.28-11.42 ), libqoauth0-dev (>= 0.1.0-1 )
+Build-Depends: libc6-dev (>= 2.9-4ubuntu6 ), libqt4-dev (>= 4.5.0-0ubuntu4.1 ), libstdc++6-4.4-dev (>= 4.3.3-5ubuntu4 ), linux-libc-dev (>= 2.6.28-12.43 ), libqoauth-dev (>= 1.0-1 )
 Standards-Version: 3.8.0
 Homepage: http://qtwitter.ayoy.net
 
 Package: qtwitter
 Architecture: i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: A Qt-based client for Twitter and Identi.ca
- This is a standalone client for Twitter and Indenti.ca social networks.
+Description: A Qt client for Twitter and Identi.ca.
+ This is a standalone client for Twitter (twitter.com) and Identi.ca social networks.
