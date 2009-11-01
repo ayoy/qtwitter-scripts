@@ -1,5 +1,5 @@
 Name:		qtwitter
-Version:	0.9.2
+Version:	0.10.0
 Release:	1%{?dist}
 Summary:	A Qt-based client for Twitter and Identi.ca
 
@@ -13,14 +13,11 @@ BuildRequires:	qt-devel qoauth-devel >= 1.0
 Requires:	qt-x11 qoauth >= 1.0
 
 %description
-qTwitter is an application interacting with Twitter and Identi.ca social
-networks.
+qTwitter is an microblogging services client.
 
 %prep
 %setup -q
-sed -i "s!\$\${INSTALL_PREFIX}\/lib!%{_libdir}!" \
-    twitterapi/twitterapi.pro urlshortener/urlshortener.pro
-sed -i -e '/-Wl,-rpath,\$\${TOP}/d' qtwitter-app/qtwitter-app.pro
+sed -i -e '/-Wl,-rpath,\$\${DESTDIR}/d' qtwitter-app/qtwitter-app.pro
 
 %build
 qmake-qt4 PREFIX="/usr"
@@ -46,11 +43,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc README CHANGELOG LICENSE
 %{_bindir}/*
 %{_libdir}/lib*
-%{_includedir}/*
+%{_libdir}/%{name}/plugins/*
 %{_datadir}/*
 
 
 %changelog
+* Sun Nov 01 2009 Dominik Kapusta <d at, ayoy.net> 0.10.0
+- New upstream version
 * Thu Oct 01 2009 Dominik Kapusta <d at, ayoy.net> 0.9.2
 - New upstream version
 * Wed Sep 30 2009 Dominik Kapusta <d at, ayoy.net> 0.9.1
